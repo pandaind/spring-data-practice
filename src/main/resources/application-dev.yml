@@ -1,0 +1,32 @@
+debug: false
+
+spring:
+  h2:
+    console:
+      enabled: true
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        generate_statistics: true # generates query execution statistics
+        format_sql: true # format the sql statements
+        connection:
+          isolation: 2 # value can be found in java.sql.Connection
+        cache:
+          use_second_level_cache: true
+          region:
+            factory_class: org.hibernate.cache.ehcache.internal.EhcacheRegionFactory
+      javax:
+        persistent:
+          sharedCache:
+            mode: ENABLE_SELECTIVE
+
+logging:
+  level:
+    org:
+      hibernate:
+          stat: debug # query execution statistics in debug mode
+          type: trace # to see the query parameter types
+    net:
+      sf:
+        ehcache: debug
