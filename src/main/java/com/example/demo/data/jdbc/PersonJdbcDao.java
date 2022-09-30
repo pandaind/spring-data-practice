@@ -13,7 +13,7 @@ import java.util.List;
 @Repository
 public class PersonJdbcDao {
 
-    private Logger log = LoggerFactory.getLogger(this.getClass());
+    private final Logger log = LoggerFactory.getLogger(this.getClass());
 
     private final JdbcTemplate jdbcTemplate;
 
@@ -23,10 +23,11 @@ public class PersonJdbcDao {
     }
 
     public List<Person> findAll() {
-        return jdbcTemplate.query("select * from person", new BeanPropertyRowMapper<Person>(Person.class));
+        return jdbcTemplate.query("select * from person", new BeanPropertyRowMapper<>(Person.class));
     }
 
     public Person findById(int id) {
+
         return jdbcTemplate.queryForObject("select * from person where id=?",
                 new PersonRowMapper(), id);
     }
@@ -38,11 +39,11 @@ public class PersonJdbcDao {
     public int insert(Person person) {
         return jdbcTemplate.update(
                 "insert into person(id, name, location, birth_date) " +
-                    "values(?, ?, ?, ?)",
-                    person.getId(),
-                    person.getName(),
-                    person.getLocation(),
-                    new Timestamp(person.getBirthDate().getTime()));
+                        "values(?, ?, ?, ?)",
+                person.getId(),
+                person.getName(),
+                person.getLocation(),
+                new Timestamp(person.getBirthDate().getTime()));
     }
 
     public int update(Person person) {

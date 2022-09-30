@@ -5,14 +5,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.5.1</version>
+		<version>2.6.12</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example.demo</groupId>
 	<artifactId>spring-data-practice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-data-practice</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Demo project for Spring Boot JPA Practice </description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
