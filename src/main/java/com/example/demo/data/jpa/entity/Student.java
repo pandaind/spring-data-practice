@@ -18,7 +18,7 @@ public class Student {
     @Embedded
     private Address address;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY) // Owning side
     private Passport passport;
 
     @ManyToMany // By Default Lazy Loading

@@ -51,6 +51,7 @@ public class Course {
     }
 
     @PreRemove // called before removing the entity... this is to handle soft delete in a transaction
+                // on persistent context
     private void preRemove() {
         this.isDeleted = true;
     }

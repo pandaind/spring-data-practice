@@ -94,4 +94,16 @@ class CourseRepositoryTest {
 
         repository.addReviewForCourse(10001L, reviews);
     }
+
+    @Transactional
+    void firstLevelCacheDemo(){
+        // will print only 1 query in one transactional
+        // uses first level cache of persistence context
+        // if @Transactional is removed then it will print query
+        // for each findById call
+        repository.findById(1001l);
+        repository.findById(1001l);
+        repository.findById(1001l);
+        repository.findById(1001l);
+    }
 }

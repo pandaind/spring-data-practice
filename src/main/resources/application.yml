@@ -20,13 +20,13 @@ spring:
         connection:
           isolation: 2 # value can be found in java.sql.Connection
         cache:
-          use_second_level_cache: true
-          region:
+          use_second_level_cache: true # enable second level cache
+          region: # specify the caching framework
             factory_class: org.hibernate.cache.ehcache.internal.EhcacheRegionFactory
       javax:
         persistent:
           sharedCache:
-            mode: ENABLE_SELECTIVE
+            mode: ENABLE_SELECTIVE # Only Cache what is specified
 
 logging:
   level:
