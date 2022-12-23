@@ -39,7 +39,7 @@ WHERE Price >= 180;
 SELECT Name, Price
 FROM Products
 WHERE Price >= 180
-ORDER BY Price DESC, Name ASC;
+ORDER BY Price DESC, Name;
 
 -- 1.10 Select all the data from the products, including all the data for each product's manufacturer.
 SELECT p.*, m.Name
@@ -93,7 +93,7 @@ FROM Products
 where Price = (SELECT MIN(Price) FROM Products);
 
 -- 1.16 Select the name of each manufacturer along with the name and price of its most expensive product.
-SELECT max_price_t.Name, max_price_t.price, all_price_t.mName
+SELECT max_price_t.Name, max_price_t.price, all_price_t.Name
 FROM (SELECT MAX(P.Price) price, M.Name
       FROM Products P,
            Manufacturers M
@@ -105,7 +105,6 @@ FROM (SELECT MAX(P.Price) price, M.Name
            Manufacturers M
       WHERE P.Manufacturer = M.Code) all_price_t
      ON max_price_t.Name = all_price_t.mName AND max_price_t.price = all_price_t.Price;
-
 
 -- 1.17 Add a new product: Loudspeakers, $70, manufacturer 2.
 INSERT INTO Products
