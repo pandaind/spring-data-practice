@@ -1,3 +1,4 @@
+USE sql_practice;
 -- 1.1 Select the names of all the products in the store.
 SELECT Name
 FROM Products;

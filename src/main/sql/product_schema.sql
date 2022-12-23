@@ -1,14 +1,14 @@
-create database sql_practice;
-use sql_practice;
+CREATE DATABASE IF NOT EXISTS sql_practice;
+USE sql_practice;
 
-CREATE TABLE Manufacturers
+CREATE TABLE IF NOT EXISTS Manufacturers
 (
     Code INTEGER,
     Name VARCHAR(255) NOT NULL,
     PRIMARY KEY (Code)
 );
 
-CREATE TABLE Products
+CREATE TABLE IF NOT EXISTS Products
 (
     Code         INTEGER,
     Name         VARCHAR(255) NOT NULL,
