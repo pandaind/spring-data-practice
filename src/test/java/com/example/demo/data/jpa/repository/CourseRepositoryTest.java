@@ -4,18 +4,18 @@ import com.example.demo.data.SpringDataJpaPracticeApplication;
 import com.example.demo.data.jpa.entity.Course;
 import com.example.demo.data.jpa.entity.Review;
 import com.example.demo.data.jpa.entity.ReviewRating;
+import jakarta.persistence.EntityManager;
+import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.context.junit4.SpringRunner;
 
-import javax.persistence.EntityManager;
-import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 @SpringBootTest(classes = SpringDataJpaPracticeApplication.class)
 class CourseRepositoryTest {

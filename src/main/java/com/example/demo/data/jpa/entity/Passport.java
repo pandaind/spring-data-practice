@@ -1,6 +1,6 @@
 package com.example.demo.data.jpa.entity;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "Passport")

@@ -3,17 +3,17 @@ package com.example.demo.data.jpa.repository;
 import com.example.demo.data.jpa.entity.Course;
 import com.example.demo.data.jpa.entity.Passport;
 import com.example.demo.data.jpa.entity.Student;
+import jakarta.persistence.EntityManager;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.EntityManager;
-
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest
 class StudentRepositoryTest {

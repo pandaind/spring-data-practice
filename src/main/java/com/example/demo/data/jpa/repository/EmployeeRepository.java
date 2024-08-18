@@ -1,12 +1,12 @@
 package com.example.demo.data.jpa.repository;
 
 import com.example.demo.data.jpa.entity.Employee;
+import jakarta.persistence.EntityManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.EntityManager;
 import java.util.List;
 
 @Repository

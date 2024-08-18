@@ -2,15 +2,14 @@ package com.example.demo.data.jpa.repository;
 
 import com.example.demo.data.jpa.entity.Course;
 import com.example.demo.data.jpa.entity.Student;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.Query;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.DirtiesContext;
-
-import javax.persistence.EntityManager;
-import javax.persistence.Query;
 
 import java.util.List;
 import java.util.stream.Collectors;
