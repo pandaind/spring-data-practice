@@ -1,3 +1,6 @@
+CREATE DATABASE IF NOT EXISTS sql_practice;
+USE sql_practice;
+
 CREATE TABLE Movies (
   Code INTEGER PRIMARY KEY,
   Title VARCHAR(255) NOT NULL,
