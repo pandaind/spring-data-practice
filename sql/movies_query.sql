@@ -1,3 +1,4 @@
+USE sql_practice;
 -- 1
 -- Select the title of all movies.
 select title from movies;
