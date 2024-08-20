@@ -1,3 +1,4 @@
+CREATE DATABASE IF NOT EXISTS sql_practice;
 USE sql_practice;
 
 CREATE TABLE Pieces (
