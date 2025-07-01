@@ -89,6 +89,14 @@ FROM Employees E
                         (SELECT Budget FROM Departments ORDER BY Budget LIMIT 2)
                         min ORDER BY min.Budget DESC LIMIT 1);
 
+SELECT T1.Name, T1.LastName
+FROM Employees AS T1
+WHERE T1.Department = (
+    SELECT Code
+    FROM Departments
+    ORDER BY Budget ASC
+    LIMIT 1 OFFSET 1
+);
 
 -- 2.16  Add a new department called "Quality Assurance", with a budget of $40,000 and departmental code 11.
 INSERT INTO Departments VALUES (11, 'Quality Assurance', 40000);
